@@ -44,4 +44,4 @@ The function should return a `dict` in the following structure:
 
 `dtlpy`
 
-If you use specific libraries for calculations, don't forget to add them to a `requirement.txt` file
+If you use specific libraries for calculations, don't forget to add them to a `requirements.txt` file.
