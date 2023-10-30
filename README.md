@@ -5,7 +5,7 @@ Custom Metrics service to provide custom calculations of annotation scores for
 
 In order to install the **Dataloop Annotators Qualification App** please contact your Customer Success Manager. 
 
-# How to Customize:
+## How to Customize:
 
 The only function that needs to be updated is `measure_annotations` in the script: [custom_metrics.py](custom_metrics.py). \
 The function should return a `dict` in the following structure:
@@ -27,20 +27,20 @@ The function should return a `dict` in the following structure:
 } 
 ```
 
-# How to deploy:
+## How to deploy:
 
 1. Make sure that the `project_name` is correct in [deployment_parameters.py](deployment_parameters.py).
 2. Run the script [service_deployment.py](service_deployment.py).
 
-# How to connect to Qualification App:
+## How to connect to Qualification App:
 1. Make sure that the `project_name` is correct in [deployment_parameters.py](deployment_parameters.py).
 2. Run the function `execute_connect_to_qualification` in the script: [add_service_to_app.py](add_service_to_app.py).
 
-# How to disconnect from Qualification App:
+## How to disconnect from Qualification App:
 1. Make sure that the `project_name` is correct in [deployment_parameters.py](deployment_parameters.py).
 2. Run the function `execute_disconnect_to_qualification` in the script: [add_service_to_app.py](add_service_to_app.py).
 
-# Requirements
+## Requirements
 
 `dtlpy`
 
