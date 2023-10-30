@@ -130,7 +130,12 @@ def main():
     connect_to_application = True
 
     project = dl.projects.get(project_name=project_name)
-    deploy(project=project, package_name=package_name, upload_package=upload_package)
+    deploy(
+        project=project,
+        package_name=package_name,
+        upload_package=upload_package,
+        connect_to_application=connect_to_application
+    )
 
 
 if __name__ == '__main__':
