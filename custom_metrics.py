@@ -41,7 +41,7 @@ class CustomMetrics:
             subset_one = [a1 for a1 in annotations_set_one if a1.type == annotation_type]
             subset_two = [a2 for a2 in annotations_set_two if a2.type == annotation_type]
 
-            if subset_one and subset_two:
+            if len(subset_one) >= 1 and len(subset_two) >= 1:
                 match_list = list()
                 label_scores_dict = defaultdict(dict)
                 attributes_scores_dict = defaultdict(dict)
@@ -112,6 +112,18 @@ class CustomMetrics:
                     "ref_number": ref_number,
                     "test_number": test_number,
                     "match_number": match_number
+                }
+            elif len(subset_one) >= 1 or len(subset_two) >= 1:
+                ref_number = len(subset_one)
+                test_number = len(subset_two)
+
+                scores_dict[annotation_type] = {
+                    "annotation_score": 0.0,
+                    "label_score": 0.0,
+                    "attributes_score": 0.0,
+                    "ref_number": ref_number,
+                    "test_number": test_number,
+                    "match_number": 0
                 }
 
         total_scores_list = list()
